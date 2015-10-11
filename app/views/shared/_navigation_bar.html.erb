@@ -1,0 +1,29 @@
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped together for better mobile display -->
+		<div class=navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="sr-only">Toggle navigaton</span>
+				<span class="icon-bar" />
+				<span class="icon-bar" />
+				<span class="icon-bar" />
+			</button>
+			<a class="navbar-brand" href="#"><i>w2ccr.net</i></a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="nav navbar-nav pull-right">
+				<%=nav_link 'Home', root_path %>
+				<%=nav_link 'About', about_path %>
+				<li class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Services<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="photography/">Photography</a></li>
+						<li><a href="itserv/">IT Services</a></li>
+					</ul>
+				</li>
+				<li><a href="blog/">Blog</a></li>
+				<li><a href="contact/">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
