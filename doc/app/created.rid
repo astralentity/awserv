@@ -1,0 +1,6 @@
+Sun, 11 Oct 2015 23:03:19 -0400
+README.rdoc	Sun, 11 Oct 2015 20:21:08 -0400
+app/controllers/application_controller.rb	Sun, 11 Oct 2015 20:21:08 -0400
+app/controllers/static_controller.rb	Sun, 11 Oct 2015 21:17:03 -0400
+app/helpers/application_helper.rb	Sun, 11 Oct 2015 20:21:08 -0400
+app/helpers/static_helper.rb	Sun, 11 Oct 2015 20:21:08 -0400
