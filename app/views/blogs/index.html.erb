@@ -1,0 +1,17 @@
+<h1>Astral Wolf's Blog</h1>
+  <% @blogs.each do |blog| %>
+    <div class="panel panel-default">
+        <div class="panel-heading"><h4><%= blog.title %></h4></div>
+        <div class="panel-body"><%= blog.body.first(80) %>...</div>
+	<div class="panel-footer">
+          <%= link_to 'Show', blog, :class => "btn btn-primary" %>
+          <%= link_to 'Edit', edit_blog_path(blog), :class => "btn btn-primary" %>
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+	  <b>Created:</b> <%= blog.created_at %> | <b>Modified:</b> <%=blog.updated_at %>
+        </div>
+    </div>
+  <% end %>
+
+<br>
+
+<%= link_to "New Entry", new_blog_path, :class => "btn btn-primary" %>

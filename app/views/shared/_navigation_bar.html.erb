@@ -17,12 +17,12 @@
 				<li class="dropdown">
 					<a href="#" data-toggle="dropdown" class="dropdown-toggle">Services<b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="photography/">Photography</a></li>
-						<li><a href="itserv/">IT Services</a></li>
+						<%=nav_link 'Photography', photography_path %>
+						<%=nav_link 'IT Services', itserv_path %>
 					</ul>
 				</li>
 				<li><a href="blog/">Blog</a></li>
-				<li><a href="contact/">Contact</a></li>
+				<%= nav_link 'Contact', contact_path %>
 			</ul>
 		</div>
 	</div>

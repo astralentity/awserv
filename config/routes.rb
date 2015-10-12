@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :blogs
   get 'static/index'
 
   get 'photography' => 'static#photography'
