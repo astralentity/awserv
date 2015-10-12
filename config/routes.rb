@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   get 'static/index'
 
+  get 'photography' => 'static#photography'
+
+  get 'itserv' => 'static#itserv'
+
+  get 'contact' => 'static#contact'
+
   get 'about' => 'static#about'
  
   root 'static#index'
