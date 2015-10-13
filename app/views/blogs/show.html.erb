@@ -2,7 +2,11 @@
 
 <div class="panel panel-default">
   <div class="panel-heading"><h4><%= @blog.title %></h4></div>
-  <div class="panel-body"><%= @blog.body %></div>
+  <div class="panel-body">
+    <%= @blog.body.html_safe %>
+    <hr />
+    <p>Tags: <%= @blog.tag_list %></p>
+  </div>
   <div class="panel-footer">
     <%= link_to 'Edit', edit_blog_path(@blog), :class => 'btn btn-primary' %>
     <%= link_to 'Delete', @blog, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>

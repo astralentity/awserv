@@ -1,10 +1,10 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-
+  before_action :tag_cloud
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.order('id DESC')
   end
 
   # GET /blogs/1
@@ -61,6 +61,10 @@ class BlogsController < ApplicationController
     end
   end
 
+  def tag_cloud
+    @tags = Blog.tag_counts_on(:tags)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
@@ -69,6 +73,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :tag_list)
     end
 end
