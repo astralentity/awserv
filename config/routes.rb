@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  Blogo::Routes.mount_to(self, at: '/blog')
   resources :tags, only: [:index, :show]
   resources :blogs
   get 'static/index'

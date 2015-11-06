@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'blogo'
 gem 'acts-as-taggable-on'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
